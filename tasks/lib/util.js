@@ -87,7 +87,7 @@ exports.init = function (grunt) {
     var content = grunt.file.read(file);
 
     var output = exports.replace_urls(old_url, new_url, content);
-    var output = replace('Warning', '-- WARNING'); // Hack to prevent warnings causing errors
+    var output = output.replace('Warning', '-- WARNING'); // Hack to prevent warnings causing errors
 
     grunt.file.write(file, output);
   };
